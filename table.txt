@@ -1,0 +1,87 @@
+//建表语句
+drop table if exists user;
+create table user(
+  user_id  integer not null auto_increment = 10000 ,
+  user_phone varchar(32) not  null comment '用户手机号',
+  user_password varchar(32) not null comment '用户密码',
+  primary key (`user_id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4   comment '用户表';
+
+//用户信息表
+drop table if exists user_message;
+create table user_message(
+  id INTEGER UNSIGNED  NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  user_id integer NOT NULL  comment '用户ID',
+  userName varchar(64) not null default '不同凡响的名字' comment '昵称',
+  user_avater varchar(64)  COMMENT '用户头像',
+  user_sex  smallint(2) NOT NULL DEFAULT '1' COMMENT '用户性别',
+  live_city varchar(256) NOT NULL COMMENT '居住城市',
+  birth_city varchar(256) NOT NULL COMMENT '出生城市',
+  user_height int(11) NOT NULL COMMENT '身高',
+  user_occupation varchar(256)  COMMENT '职业',
+  income_level varchar(256) NOT NULL COMMENT '薪资收入',
+  education_level varchar(256) NOT NULL COMMENT '教育程度',
+  self_introduction varchar(256) COMMENT '自我介绍',
+  introduce_video varchar(256)  COMMENT '视频介绍',
+  account_credits  INTEGER DEFAULT 0 comment '用户积分'
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 comment '用户信息表';
+
+
+//意中人表格
+drop table if exists partner_claim;
+create table partner_claim(
+   partner_id integer not null AUTO_INCREMENT ,
+   user_id integer  unsigned not null  ,
+   partner_minage tinyint(3)  comment '最小年龄',
+   partner_age tinyint(3)  comment '年龄',
+   partner_maxage tinyint(3)  comment '最大年龄',
+   partner_birth_city varchar(32)  comment '出生城市',
+   partner_live_city varchar(32)  comment '居住城市',
+   partner_hight integer  comment '身高',
+   partner_income_level varchar(32) comment '薪资收入',
+   partner_education_level varchar(32)  comment '教育程度',
+   partner_real_estate tinyint(3) default 0 comment '有无房产',
+   primary key (`partner_id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 comment '你的意中人';
+
+
+//登录和登出记录
+DROP TABLE IF EXISTS login_recording;
+CREATE TABLE login_recording (
+  login_id integer NOT NULL auto_increment,
+  user_id varchar(32) NOT NULL COMMENT '登录用户',
+  login_status integer  default  1  NOT NULL COMMENT '登录状态',  //记录登录和登出
+  login_intime timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '登录时间',
+  login_outtime timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '登出时间',
+  login_latitude double  COMMENT '维度',
+  login_longitude double  COMMENT '经度',
+  PRIMARY KEY (login_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='登录记录';
+
+
+//用户角色
+//Role  1 普通用户  2 会员用户  3 红娘  4 管理员
+drop table if EXISTS user_role;
+create table user_role(
+  role_id smallint unsigned auto_increment ,
+  role_type smallint unsigned default 1  comment '角色ID',
+  role_desc varchar(32) comment '角色描述',
+  primary key (`role_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  comment '用户角色表';
+
+
+//浏览记录表
+//相亲评论(对这次体验的评论)
+//意中人 (你对他有好感觉，发短信进行通知）
+//用户信息完整度（用户信息完整度越高的就需要优先通知)
+//用户注册情况的优先通知
+//以及一张积分表
+//引入谈谈  左滑右滑(主要是增加App用户的粘合度）
+
+//做出来这个产品我就去找种子轮  找三个合伙人   500万左右
+
+1.运营团队 2.宣传团队   3.自己呢依旧负责搭建整个架构
+搭建团队
+1.完整的开发团队  2.完整的地推团队 3.完整的策划和宣传的团队
+
+

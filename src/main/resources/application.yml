@@ -1,0 +1,26 @@
+spring:
+      datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        username: root
+        password:
+        url: jdbc:mysql://localhost/love?characterEncoding=utf-8&useSSL=false
+      redis:
+        host: 192.168.30.173
+        port: 6379
+        password: 123456
+      jpa:
+        show-sql: true
+      #用来配置返回值是否为null的
+      jackson:
+        default-property-inclusion: non_null
+
+#打印日志的级别
+logging:
+    level:
+       com.love.marriage.dataobject.mapper: trace
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+
+server:
+    context-path: /love
