@@ -5,6 +5,7 @@ import com.love.marriage.dataobject.dao.UserDao;
 import com.love.marriage.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
 
 /**
@@ -41,5 +42,11 @@ public class UserServiceImpl implements UserService {
         }
         return true;
     }
+
+    @Override
+    public User loginUser(String phone, String password) {
+        return userDao.loginUser(phone, password);
+    }
+
 
 }

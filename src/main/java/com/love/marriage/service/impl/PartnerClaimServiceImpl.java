@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
  * Create Date: 1/11/2018
  * Class Describe
  **/
+
 @Service
 public class PartnerClaimServiceImpl implements PartnerClaimService {
 
@@ -31,5 +32,6 @@ public class PartnerClaimServiceImpl implements PartnerClaimService {
     public PartnerClaim findOneByUserId(int userId) {
         return partnerClaimRepository.findByUserId(userId);
     }
+
 
 }

@@ -9,6 +9,7 @@ import com.love.marriage.dataobject.bean.PartnerClaim;
  * <p>
  * 对于意中人的增加和修改
  **/
+
 public interface PartnerClaimService {
 
     public PartnerClaim create(PartnerClaim partnerClaim);
@@ -16,6 +17,5 @@ public interface PartnerClaimService {
     public PartnerClaim save(PartnerClaim partnerClaim);
 
     public PartnerClaim findOneByUserId(int userId);
-
 
 }

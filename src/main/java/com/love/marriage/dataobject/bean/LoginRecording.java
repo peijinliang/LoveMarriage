@@ -4,7 +4,6 @@ import lombok.Data;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import java.sql.Timestamp;
 
 /**
  * Crete by Marlon
@@ -18,14 +17,17 @@ public class LoginRecording {
 
     @Id
     private Integer loginId;
-
     private Integer userId;
-
-    private Timestamp loginIntime;
-
+    private Integer loginStatus;
     private Double loginLatitude;
-
     private Double loginLongitude;
+
+    public LoginRecording(Integer userId, int loginStatus, double loginLatitude, double loginLongitude) {
+        this.userId = userId;
+        this.loginStatus = loginStatus;
+        this.loginLatitude = loginLatitude;
+        this.loginLongitude = loginLongitude;
+    }
 
 
 }

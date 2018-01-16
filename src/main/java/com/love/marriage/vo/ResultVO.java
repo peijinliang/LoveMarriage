@@ -25,5 +25,4 @@ public class ResultVO<T> implements Serializable {
 
     private T data;
 
-
 }

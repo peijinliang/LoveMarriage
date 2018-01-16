@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 import javax.validation.Valid;
 
 /**
@@ -22,7 +23,6 @@ import javax.validation.Valid;
  * Create Date: 1/11/2018
  * Class Describe
  **/
-
 @RestController
 @RequestMapping("/partner")
 @Slf4j

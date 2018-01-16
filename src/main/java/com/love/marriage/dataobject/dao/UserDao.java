@@ -12,6 +12,7 @@ import java.util.List;
  * Create Date: 1/10/2018
  * Class Describe
  **/
+
 @Component
 public class UserDao {
 
@@ -36,6 +37,11 @@ public class UserDao {
 
     public User findUserByPhone(String phone) {
         return userMapper.findUserByPhone(phone);
+    }
+
+    //登录
+    public User loginUser(String phone, String password) {
+        return userMapper.loginUser(phone, password);
     }
 
 

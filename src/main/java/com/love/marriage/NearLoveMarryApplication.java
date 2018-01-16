@@ -9,6 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * Create Date: 1/9/2018
  * Class Describe
  **/
+
 @SpringBootApplication
 @MapperScan(basePackages = "com.love.marriage.dataobject.mapper")
 public class NearLoveMarryApplication {

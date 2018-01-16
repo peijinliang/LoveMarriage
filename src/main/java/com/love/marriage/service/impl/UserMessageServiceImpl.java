@@ -56,7 +56,6 @@ public class UserMessageServiceImpl implements UserMessageService {
         userMessageRepository.save(userMessage);
     }
 
-
     //增加积分  减少积分
     @Override
     public int updateAccountCredits(int userId, int credits) {

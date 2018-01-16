@@ -22,7 +22,6 @@ public class UserMessageForm {
     @NotEmpty(message = "用户姓名不能为空")
     private String userName;
 
-
     @NotEmpty(message = "请选择性别")
     private String userSex;
 
@@ -43,5 +42,6 @@ public class UserMessageForm {
 
     @NotEmpty(message = "请填写您的最高学历")
     private String educationLevel;
+
 
 }

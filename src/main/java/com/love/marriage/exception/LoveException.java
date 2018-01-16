@@ -8,6 +8,7 @@ import lombok.Getter;
  * Create Date: 1/10/2018
  * Class Describe
  **/
+
 @Getter
 public class LoveException extends RuntimeException {
 
@@ -22,5 +23,6 @@ public class LoveException extends RuntimeException {
         super(message);
         this.code = code;
     }
+
 
 }

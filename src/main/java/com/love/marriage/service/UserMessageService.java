@@ -25,4 +25,5 @@ public interface UserMessageService {
 
     public int updateAccountCredits(int userId, int credits);
 
+
 }

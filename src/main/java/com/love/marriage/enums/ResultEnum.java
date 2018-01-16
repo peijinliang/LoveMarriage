@@ -18,7 +18,8 @@ public enum ResultEnum {
     PARAM_ERROR(1, "参数不正确"),
     REGISTER_REPEAT_ERROR(2, "该手机号已经被注册"),
     NOT_REGISTER_ERROR(3, "该手机号尚未被注册"),
-    NOT_USERMESSAGE_ERROR(4, "该用户信息尚未填写");
+    NOT_USERMESSAGE_ERROR(4, "该用户信息尚未填写"),
+    LOGIN_PASSWORD_ERROR(5, "密码错误");
 
     private Integer code;
     private String message;

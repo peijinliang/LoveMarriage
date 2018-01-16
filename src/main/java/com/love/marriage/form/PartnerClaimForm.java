@@ -33,5 +33,4 @@ public class PartnerClaimForm {
 
     private String partnerRealEstate;
 
-
 }

@@ -12,6 +12,7 @@ import javax.persistence.Id;
  * 很多条件写的不太仔细，主要是没有做过。然后希望自己在以后的时候能修改过来
  **/
 
+
 @Data
 @Entity
 public class PartnerClaim {
@@ -36,5 +37,6 @@ public class PartnerClaim {
     private String partnerEducationLevel;
 
     private String partnerRealEstate;
+
 
 }

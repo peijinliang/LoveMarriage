@@ -9,9 +9,7 @@ import com.love.marriage.enums.ResultEnum;
  * Create Date: {DATE}
  * Class Describe
  **/
-
 public class ResultVOUtils {
-
 
     public static ResultVO success(Object object) {
         ResultVO resultVO = new ResultVO();
@@ -21,7 +19,6 @@ public class ResultVOUtils {
         return resultVO;
     }
 
-
     public static ResultVO success() {
         ResultVO resultVO = new ResultVO();
         resultVO.setData(null);
@@ -29,7 +26,6 @@ public class ResultVOUtils {
         resultVO.setCode(0);
         return resultVO;
     }
-
 
     public static ResultVO error(Integer code, String msg) {
         ResultVO resultVO = new ResultVO();

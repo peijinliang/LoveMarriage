@@ -7,6 +7,7 @@ create table user(
   primary key (`user_id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4   comment '用户表';
 
+
 //用户信息表
 drop table if exists user_message;
 create table user_message(
@@ -63,8 +64,8 @@ CREATE TABLE login_recording (
 //Role  1 普通用户  2 会员用户  3 红娘  4 管理员
 drop table if EXISTS user_role;
 create table user_role(
-  role_id smallint unsigned auto_increment ,
-  role_type smallint unsigned default 1  comment '角色ID',
+  role_id integer unsigned auto_increment ,
+  role_type integer unsigned default 1  comment '角色ID',
   role_desc varchar(32) comment '角色描述',
   primary key (`role_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4  comment '用户角色表';
@@ -76,12 +77,24 @@ create table user_role(
 //用户信息完整度（用户信息完整度越高的就需要优先通知)
 //用户注册情况的优先通知
 //以及一张积分表
-//引入谈谈  左滑右滑(主要是增加App用户的粘合度）
+//引入探探  左滑右滑(主要是增加App用户的粘合度）
+//模仿和超越
 
-//做出来这个产品我就去找种子轮  找三个合伙人   500万左右
 
+//做出来这个产品找种子轮  找三个合伙人   500万左右
 1.运营团队 2.宣传团队   3.自己呢依旧负责搭建整个架构
 搭建团队
 1.完整的开发团队  2.完整的地推团队 3.完整的策划和宣传的团队
+技术：BootStrap 后台前端界面
+
+
+宣传网页的话就是HTML(从晚上下载一个一个服务器模板，直接进行下载）
+
+
+1.公司理念（配对方式）
+2.服务理念
+3.高效成功
+
+
 
 

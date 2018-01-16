@@ -12,6 +12,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
+
 import javax.validation.Valid;
 
 /**
@@ -71,7 +72,6 @@ public class UserMessageController {
         userMessageService.updateNickName(userId, name);
         return ResultVOUtils.success();
     }
-
 
     @PutMapping("/avater")
     public ResultVO updateAvaterByUserId(@RequestParam(value = "userId") Integer userId,

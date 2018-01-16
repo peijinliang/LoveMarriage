@@ -12,22 +12,19 @@ import java.util.Map;
  * Class Describe
  * user 表使用 mybatis 来学习
  * 通过sql语句进行灵活的配置书写
- * <p>
- * <p>
  * 还缺一个分页查询用户
  * 统计数量的这个地方还有问题
  **/
+
 public interface UserMapper {
 
     //插入通过字段的方式
     @Insert({"insert into user ( user_phone,user_password) values (#{user_phone,jdbcType=VARCHAR},#{ user_password,jdbcType=VARCHAR})"})
     int insertByMap(Map<String, Object> map);
 
-
     //插入通过对象的方式
     @Insert({"insert into user (user_phone,user_password) values (#{userPhone,jdbcType=VARCHAR},#{userPassword,jdbcType=VARCHAR})"})
     int insertByObject(User user);
-
 
     @Select("select * from  user where user_phone = #{userPhone}")
     @Results({
@@ -36,7 +33,6 @@ public interface UserMapper {
                      @Result(column = "user_password", property = "userPassword")
     })
     User findUserByPhone(String phone);
-
 
     //判断该用户是否存在
     @Select("select count(*) as  num from  user where user_phone = #{userPhone}")
@@ -55,15 +51,21 @@ public interface UserMapper {
     User findUserByUserId(String userId);
 
 
+    @Select("select * from  user where user_phone = #{user_phone} and user_password = #{userPassword} ")
+    @Results({
+                     @Result(column = "user_phone", property = "userPhone"),
+                     @Result(column = "user_password", property = "userPassword")
+    })
+    User loginUser(String userPhone, String userPassword);
+
+
     //根据参数修改对象
     @Update("update user set user_password = #{userPassword}  where user_id = #{userId}")
     int updatePasswordByUserId(@Param("userId") String userId, @Param("userPassword") String userPassword);
 
-
     //根据对象修改参数
     @Update("update user set user_password = #{userPassword}  where user_phone = #{userPhone}")
     int updatePasswordByPhone(User ser);
-
 
     @Select("select * from user ")
     @Results({
